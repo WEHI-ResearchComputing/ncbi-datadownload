@@ -35,7 +35,8 @@ nano config.json
 "download_dir": "/vast/scratch/users/iskander.j/download", 
 "output_dir": "/vast/scratch/users/iskander.j/ncbi_output"}
 ```
-Change the paths values for download_dir and output_dir to your directories on vast or HPCScratch
+Change the paths values for download_dir and output_dir to your directories on vast or HPCScratch.
+You can also change the inclusion genome name `taxname` or add/remove items from the exclusion group `other_species`
 
 ## Modify slurm job submission script
 Open `job.slurm` add your email after `--mail-user`
@@ -65,6 +66,14 @@ python run.py
 ```
 sbatch job.slurm
 ```
+# Output Folder structure
+|- Master
+|- Nontarget
+|- Pool
+|- Results
+
+Pool will contain all inclusion genomes
+Nontarget will contain all exclusion group genomes
 
 # [Montiring the job](https://rc.wehi.edu.au/Documentation/getting-started/batch-system/getting-started)
 
