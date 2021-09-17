@@ -77,5 +77,5 @@ Pool will contain all inclusion genomes. Nontarget will contain all exclusion gr
 
 # [Montiring the job](https://rc.wehi.edu.au/Documentation/getting-started/batch-system/getting-started)
 
-`squeue -u <useid>` will show a list of your jobs running in the queue, `R` means running and `PD` means pending
+`squeue -u <userid>` will show a list of your jobs running in the queue, `R` means running and `PD` means pending
 A text file will be created in the folder called ncbi_dl_<jobid>.out to where the output of the running processes will be redirected.
