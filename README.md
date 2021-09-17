@@ -22,5 +22,41 @@ The result should be similar to
 11.32.1
 ```
 
+## Configure Download/Output directories
+You can use any text editor to open `config.json` that or through Open Ondemand File Menu
+```
+nano config.json
+```
+```
+{"taxname": "Pseudomonas aeruginosa", 
+"assembly_level": ["complete_genome"], 
+"ret_content": "ASSM_ACC", 
+"other_species": ["Pseudomonas putida", "Pseudomonas fluorescens", "Pseudomonas stutzeri", "Pseudomonas syringae", "Pseudomonas viridiflava", "Pseudomonas chlororaphis"], 
+"download_dir": "/vast/scratch/users/iskander.j/download", 
+"output_dir": "/vast/scratch/users/iskander.j/ncbi_output"}
+```
+Change the paths values for download_dir and output_dir to your directories on vast or HPCScratch
+
+## Modify slurm job submission script
+Open job.slurm add your email after `--mail-user`
+```
+#!/bin/bash
+
+#SBATCH --time=8:00:00
+#SBATCH --job-name=ncbi_dl
+#SBATCH --mail-type=ALL
+#SBATCH --mail-user=iskander.j@wehi.edu.au
+#SBATCH --output %x_%j.out
+#SBATCH --cpus-per-task=10
+#SBATCH --mem=500MB
+
+source /stornext/System/data/apps/anaconda3/anaconda3-4.3.1/etc/profile.d/conda.sh
+conda activate ncbi
+
+python run.py
+
+```
+
 ## Running
+sbatch job.slurm
 
