@@ -79,3 +79,9 @@ Pool will contain all inclusion genomes. Nontarget will contain all exclusion gr
 
 `squeue -u <userid>` will show a list of your jobs running in the queue, `R` means running and `PD` means pending
 A text file will be created in the folder called ncbi_dl_<jobid>.out to where the output of the running processes will be redirected.
+When the job ends, you will get an email and to check that all files have been downloaded check the last line in ncbi_dl_<jobid>.out
+
+```
+Found 654,398 and Moved 654,398
+```
+The numbers of files found for inclusion group (654) and exclusion group (398) should be equal to number of files moved for inclusion group (654) and exclusion group (398).
