@@ -61,5 +61,7 @@ python run.py
 ```
 
 ## Running
+```
 sbatch job.slurm
+```
 
