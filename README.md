@@ -67,10 +67,15 @@ python run.py
 sbatch job.slurm
 ```
 # Output Folder structure
+
 |- Master
+
 |- Nontarget
+
 |- Pool
+
 |- Results
+
 
 Pool will contain all inclusion genomes
 Nontarget will contain all exclusion group genomes
