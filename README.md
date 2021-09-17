@@ -61,7 +61,12 @@ python run.py
 ```
 
 ## Running
+
 ```
 sbatch job.slurm
 ```
 
+# [Montiring the job](https://rc.wehi.edu.au/Documentation/getting-started/batch-system/getting-started)
+
+`squeue -u <useid>` will show a list of your jobs running in the queue, `R` means running and `PD` means pending
+A text file will be created in the folder called ncbi_dl_<jobid>.out to where the output of the running processes will be redirected.
