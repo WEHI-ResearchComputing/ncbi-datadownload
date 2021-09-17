@@ -38,7 +38,10 @@ nano config.json
 Change the paths values for download_dir and output_dir to your directories on vast or HPCScratch
 
 ## Modify slurm job submission script
-Open job.slurm add your email after `--mail-user`
+Open `job.slurm` add your email after `--mail-user`
+```
+nano job.slurm
+```
 ```
 #!/bin/bash
 
