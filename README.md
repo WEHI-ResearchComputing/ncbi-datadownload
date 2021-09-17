@@ -73,8 +73,7 @@ sbatch job.slurm
 * Results
 
 
-Pool will contain all inclusion genomes
-Nontarget will contain all exclusion group genomes
+Pool will contain all inclusion genomes. Nontarget will contain all exclusion group genomes
 
 # [Montiring the job](https://rc.wehi.edu.au/Documentation/getting-started/batch-system/getting-started)
 
