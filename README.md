@@ -9,11 +9,13 @@ cd ncbi-datadownload
 module load anaconda3
 conda init
 conda create --name ncbi --file requirements.txt
+
 ```
 
-## Test env is set up correctly
+## Install ncbi and test env is set up correctly
 ```
 conda activate ncbi
+pip3 install --user ncbi-datasets-pylib~=11.0
 python -c 'import ncbi.datasets.openapi; print(ncbi.datasets.openapi.__version__)'
 
 ```
